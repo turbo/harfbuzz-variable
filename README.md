@@ -4,6 +4,8 @@ A HiDPI-ready, minimal preview renderer for viewing variable TTF fonts using Har
 
 This code is dedicated to the public domain, or licenses under CC0 (your choice). Included fonts have their own licenses, see `licenses/`.
 
+![](./demo.gif)
+
 ## Building
 
 Install deps, for example on macOS:
