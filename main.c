@@ -210,10 +210,10 @@ int main(int argc, char **argv)
   hb_face_t *hb_face = hb_font_get_face(hb_font);
 
   /* detect which ss0n exist, print info -------------------------- */
-  bool ss_present[9] = {0};
-  for (int i = 0; i < 9; i++)
+  bool ss_present[20] = {0};
+  for (int i = 0; i < 20; i++)
   {
-    hb_tag_t tag = HB_TAG('s', 's', '0', '1' + i);
+    hb_tag_t tag = HB_TAG('s', 's', '0' + (i / 10), '0' + (i % 10));
     ss_present[i] = has_feature(hb_face, tag);
   }
   fprintf(stderr, "Axis ranges  wght:%d-%d  wdth:%d-%d  slnt:%d-%d\n",
